@@ -77,7 +77,7 @@ function Home() {
     
     return (
         <>
-            <section className="main-container w-full bg-#212121">
+            <section className="main-container w-full bg-[#212121]">
                 <nav className='navbar h-8 w-full flex justify-item-center '>
                     <div className="slider w-20 flex gap-6 ">
                         <div className='logos ml-4'>

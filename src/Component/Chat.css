@@ -13,6 +13,9 @@
   font-weight: bold;
   color: white;
 }
+.main-container {
+ background-color: #212121;
+}
 .navbar .slider .chatlogo img{
   width: 30px;
   border-radius: 30%;
