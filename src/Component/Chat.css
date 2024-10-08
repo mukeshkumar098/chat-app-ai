@@ -1,0 +1,119 @@
+.mychat-section{
+  height:78vh;
+  scrollbar-width: none;      
+}
+.mychat-container{
+  width: 900px;
+}
+.main-container .navbar{
+  justify-content: space-between;
+}
+.main-container .navbar .login button{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+.navbar .slider .chatlogo img{
+  width: 30px;
+  border-radius: 30%;
+ 
+  color: white;
+}
+.main-container .navbar .slider .logos{
+  margin-left: 30px;
+}
+   .message-container{
+    line-height: 30px;
+   } 
+.user-data{
+    float: right;
+    margin-right: 20px;
+
+    width: fit-content;
+    background-color: #2F2F2F;
+    padding: 10px;
+    border-radius: 10px 0px 10px 10px;
+    color: #ECECEC;
+    margin-bottom: 10px;
+}
+.chatGpt{
+  width: 100%;
+  float: left;
+    padding: 10px 50px;
+    border-radius: 6px 6px 6px 10px;
+    color: #ECECEC;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  
+
+}
+.chatGpt img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  top: 35px;
+  right: 50px;
+  opacity: 0.7;
+
+ }
+ .All-messages{
+display: flex;align-items: center;
+ }
+  .input-section{
+    background-color: #2F2F2F;
+    border-radius: 30px;
+    position: sticky;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+   
+  }
+  .input-section input{
+    background: transparent;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 40px;
+    background-color: #2F2F2F;
+    border: none;
+    flex: 1;
+    color: #fff;
+    outline: none;
+    font-weight: 14;
+    font-size: 1rem;
+
+  
+  }
+  .input-section .icons-chat{
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    color: #2F2F2F;
+    font-weight: 16px;
+    background-color: #676767;
+    cursor: pointer;
+    border-radius: 50%;
+   margin-right: 10px;
+  }
+  @media screen and (max-width:750px) {
+    .mychat-section{
+    height: 460px;   
+    scrollbar-width: none; 
+    padding: 10px;
+    }
+    .input-section{
+      background-color: #2F2F2F;
+      border-radius: 30px;
+      position: sticky;
+      margin: 10px;
+      top: 0;
+      left: 0;
+      right: 0;
+  
+     
+    }
+  }
