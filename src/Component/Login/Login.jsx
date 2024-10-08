@@ -56,7 +56,7 @@ function Login() {
                           
                             <div className="google flex w-90 justify-center my-2 hover:cursor-pointer ">
                             <div className="icons flex gap-2 mt-2 p-3 w-[300px] hover:cursor-pointer rounded-[10px]  " onClick={signInWithGoogle}>
-                                <img src="/public/searchs.png" alt="google logo"  className='w-8'/>
+                                <img src="/searchs.png" alt="google logo"  className='w-8'/>
                                 <h3 onClick={signInWithGoogle}>login with google</h3>
                             </div>
                                           
@@ -66,7 +66,7 @@ function Login() {
                             </div>
                             <div className="git flex w-90 justify-center my-2 ">
                             <div className="icons flex gap-2 mt-2 p-3 w-[300px] hover:cursor-pointer rounded-[10px] " onClick={signInWithGithub}>
-                                <img src="/public/github.webp" alt="google logo"  className='w-9'/>
+                                <img src="/github.webp" alt="google logo"  className='w-9'/>
                                 <h3>Continue With Github</h3>
 
                             </div>
