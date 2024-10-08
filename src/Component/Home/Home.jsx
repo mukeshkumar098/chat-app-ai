@@ -108,7 +108,7 @@ function Home() {
                         <section className='message-container p-1 flex flex-col'>
                             <Chat message={message} loading={loading} />
                         </section>
-                        <section className='input-section flex bg-[#2F2F2F] items-center mb-4 b-2 mb-5'>
+                        <section className='input-section flex bg-[#2F2F2F] items-center mb-4 b-2 mb-10'>
                             <MdAddLink className=' addimage border-none cursor-pointer ml-4 bg-[#2F2F2F]' size={26} color='white' />
                             <input type="text" value={input} placeholder='enter your prompt'
                                 onChange={(e) => setinput(e.target.value)}/>
