@@ -20,8 +20,12 @@ function Home() {
     const [input, setinput] = useState('')
     const [message, setmessage] = useState([{ role: "system", content: 'ChatMK' },])
     const [loading, setLoading] = useState(false);
-    const navigate=useNavigate();
-    const auth=getAuth();
+    console.log('input', input);
+    console.log('message', message);
+    console.log('input', input);
+
+    const navigate = useNavigate();
+    const auth = getAuth();
     useEffect(() => {
 
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -72,9 +76,11 @@ function Home() {
         setmessage([...message])
         setLoading(false);
     }
-
-  
-    
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            chatOpenAI()
+        }
+      };
     return (
         <>
             <section className="main-container w-full bg-[#212121]">
@@ -103,19 +109,24 @@ function Home() {
 
                     </div>
                 </nav>
-                <div className="main-chat-container flex justify-center w-full ">
-                    <div className="mychat-container h-full">
-                        <section className='message-container p-1 flex flex-col'>
-                            <Chat message={message} loading={loading} />
-                        </section>
-                        <section className='input-section flex bg-[#2F2F2F] items-center mb-4 b-2 mb-10'>
-                            <MdAddLink className=' addimage border-none cursor-pointer ml-4 bg-[#2F2F2F]' size={26} color='white' />
-                            <input type="text" value={input} placeholder='enter your prompt'
-                                onChange={(e) => setinput(e.target.value)}/>
-                            <FaArrowUp className='icons-chat' onClick={chatOpenAI} color='white' />
-                        </section>
+                
+                    <div className="main-chat-container flex justify-center w-full ">
+                        <div className="mychat-container h-full">
+                            <section className='message-container p-1 flex flex-col'>
+                                <Chat message={message} loading={loading} />
+                            </section>
+
+                            <section className='input-section flex bg-[#2F2F2F] items-center mb-4 b-2 mb-10'>
+                                <MdAddLink className=' addimage border-none cursor-pointer ml-4 bg-[#2F2F2F]' size={26} color='white' />
+                                <input type="text"   onKeyPress={handleKeyPress} value={input} placeholder='enter your prompt'
+                                    onChange={(e) => setinput(e.target.value)} />
+                                <FaArrowUp className='icons-chat' onClick={chatOpenAI} color='white' />
+
+                            </section>
+                          
+                        </div>
                     </div>
-                </div>
+                
             </section>
         </>
     )

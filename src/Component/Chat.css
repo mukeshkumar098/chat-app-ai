@@ -1,5 +1,6 @@
 .mychat-section{
   height:78vh;
+  overflow-x: scroll;
   scrollbar-width: none;      
 }
 .mychat-container{
@@ -104,7 +105,7 @@ display: flex;align-items: center;
   }
   @media screen and (max-width:750px) {
     .mychat-section{
-    height: 605pxx;   
+    height: 609pxx;   
     scrollbar-width: none; 
     padding: 10px;
     }
@@ -116,7 +117,6 @@ display: flex;align-items: center;
       top: 0;
       left: 0;
       right: 0;
-      bottom: 30px;
   
      
     }
