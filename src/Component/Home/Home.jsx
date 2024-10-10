@@ -8,6 +8,7 @@ import { FaArrowUp } from "react-icons/fa";
 import { BsPencilSquare } from "react-icons/bs";
 import { FaSlidersH } from "react-icons/fa";
 import { MdAddLink } from "react-icons/md";
+import { FaRegCircleUser } from "react-icons/fa6";
 import { getAuth, GithubAuthProvider } from 'firebase/auth';
 import '../Chat.css'
 
@@ -97,7 +98,7 @@ function Home() {
                     <div className="login  flex items-center gap-3 mr-7">
                         {user ? (
                             <div className="sign-btn flex justify-center items-center  h-auto w-auto text-sm font-bold text-black rounded-full">
-                                <img src={user.photoURL} onClick={()=>setLogout(!logout)} className="rounded-full w-[60px]  p-2 hover:bg-white" alt="User Profile" />
+                                {user?.photoUrl ? <img src={user.photoURL} onClick={()=>setLogout(!logout)} className="rounded-full w-[60px]  p-2 hover:bg-white" alt="User Profile" />: <FaRegCircleUser onClick={()=>setLogout(!logout)} size={27} color='white'/>}
                               {logout && <button className='color-gray ml-2' onClick={handleLogout}>Logout</button>}  
                             </div>
                         ) : (

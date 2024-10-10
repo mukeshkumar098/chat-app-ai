@@ -43,7 +43,7 @@ const loginWithfirbase=async()=>{
     }
   }
   const handleSubmit = async (e) => {
-    e.preventDefault()
+   
     try {
       await createUserWithEmailAndPassword(auth,email, password)
       console.log('account created');
