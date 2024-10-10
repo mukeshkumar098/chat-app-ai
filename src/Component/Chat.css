@@ -105,7 +105,7 @@ display: flex;align-items: center;
   }
   @media screen and (max-width:750px) {
     .mychat-section{
-    height: 605pxx;   
+    height: 600pxx;   
     scrollbar-width: none; 
     padding: 10px;
     }
