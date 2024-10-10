@@ -20,6 +20,7 @@ function Home() {
     const [input, setinput] = useState('')
     const [message, setmessage] = useState([{ role: "system", content: 'ChatMK' },])
     const [loading, setLoading] = useState(false);
+    const [logout,setLogout] =useState(false)
     console.log('input', input);
     console.log('message', message);
     console.log('input', input);
@@ -84,7 +85,7 @@ function Home() {
     return (
         <>
             <section className="main-container w-full bg-[#212121]">
-                <nav className='navbar h-8 w-full flex justify-item-center '>
+                <nav className='navbar h-8 w-full flex pt-5 justify-item-center '>
                     <div className="slider w-20 flex gap-6 ">
                         <div className='logos ml-4'>
                             <FaSlidersH size={25} color='gray' />
@@ -95,9 +96,9 @@ function Home() {
                     </div>
                     <div className="login  flex items-center gap-3 mr-7">
                         {user ? (
-                            <div className="sign-btn flex justify-center items-center ml-2 px-4 h-auto w-auto py-1 bg-[#171717] text-sm font-bold text-black rounded-3xl">
-                                <img src={user.photoURL} className="rounded-full w-10 h-10 mr-2" alt="User Profile" />
-                                <button className='color-gray' onClick={handleLogout}>Logout</button>
+                            <div className="sign-btn flex justify-center items-center  h-auto w-auto text-sm font-bold text-black rounded-full">
+                                <img src={user.photoURL} onClick={()=>setLogout(!logout)} className="rounded-full w-[60px]  p-2 hover:bg-white" alt="User Profile" />
+                              {logout && <button className='color-gray ml-2' onClick={handleLogout}>Logout</button>}  
                             </div>
                         ) : (
                             <div className="sign-btn flex justify-center items-center ml-2 py-3 px-4 h-auto w-auto py-2 bg- text-sm font-bold text-black rounded-3xl bg-[#2F2F2F] hover:text-gray-200">
